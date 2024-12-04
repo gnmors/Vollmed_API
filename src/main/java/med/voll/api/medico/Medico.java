@@ -1,10 +1,7 @@
 package med.voll.api.medico;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import med.voll.api.endereco.Endereco;
 
 @Table(name = "medicos")
@@ -36,5 +33,25 @@ public class Medico {
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
         this.endereco = new Endereco(dados.endereco());
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getCrm() {
+        return crm;
+    }
+
+    public Especialidade getEspecialidade() {
+        return especialidade;
     }
 }
