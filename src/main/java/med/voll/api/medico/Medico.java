@@ -1,7 +1,10 @@
 package med.voll.api.medico;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import med.voll.api.endereco.Endereco;
 
 @Table(name = "medicos")
@@ -41,10 +44,6 @@ public class Medico {
 
     public String getEmail() {
         return email;
-    }
-
-    public String getTelefone() {
-        return telefone;
     }
 
     public String getCrm() {
