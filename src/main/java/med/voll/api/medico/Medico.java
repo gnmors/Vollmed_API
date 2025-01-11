@@ -57,6 +57,10 @@ public class Medico {
         return especialidade;
     }
 
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
     public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
         if (dados.nome() != null) {
             this.nome = dados.nome();
